@@ -1,0 +1,64 @@
+body{ 
+  background-image:url(whitegus.png);
+  background-repeat:no-repeat;	
+  background-color:#8A2BE2;
+  background-position:40px 5px;
+  margin:0px;
+}
+
+#blok1{
+background:pink;
+border:3px solid black;
+width:200px;
+height:130px;
+position:absolute;
+left:190px;
+font-size:1.5em;
+text-align:center;
+}
+#blok2{
+background:pink;
+border:3px solid black;
+width:200px;
+height:130px;
+position:absolute;
+left:393px;
+font-size:1.5em;
+text-align:center;
+}
+#blok3{
+background:pink;
+border:3px solid black;
+width:200px;
+height:130px;
+position:absolute;
+left:596px;
+font-size:1.5em;
+text-align:center;
+}
+#blok4{
+background:pink;
+border:3px solid black;
+width:200px;
+height:130px;
+position:absolute;
+left:799px;
+font-size:1.5em;
+text-align:center;
+}
+#blok5{
+background:pink;
+border:3px solid black;
+width:200px;
+height:130px;
+position:absolute;
+left:992px;
+font-size:1.5em;
+text-align:center;
+}
+
+p{
+  text-indent:3em;
+}
+
+
