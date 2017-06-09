@@ -1,0 +1,277 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>&#1057;&#1077;&#1090;&#1100; &#1061;&#1086;&#1087;&#1092;&#1080;&#1083;&#1076;&#1072;</title>
+<script>
+var
+w_kof= new Array();
+
+x=new Array(-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1);
+n_x= new Array();
+p_x= new Array();
+
+x1=new Array();
+x2=new Array();
+x3=new Array();
+
+x_1=new Array(1,1,1,1,1,-1,-1,-1,-1,-1,1,1,1,1,1,-1,-1,-1,-1,-1);
+x_2=new Array(-1,-1,-1,-1,-1,1,1,1,1,1,-1,-1,-1,-1,-1,1,1,1,1,1);
+x_3=new Array(1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1);
+
+
+function draw2(num,ar)
+ {
+ for(i=0;i<document.all.length;i++)
+   {
+     if(document.all(i).id == num)
+	    {
+	     for(j=0,n=0;j<=23;j++,n++)
+	      {if(j%6 == 0) j++;
+	       if(ar[n]==1) document.all(i+j-1).style.background="red";
+	        else document.all(i+j-1).style.background="white";}
+
+	      return;
+	    }
+	 }
+ }
+function on()
+{
+with(window.event.srcElement)
+   {
+   /*alert(sourceIndex);*/
+   if(tagName == "TD")
+    if(style.backgroundColor == "red")
+      style.backgroundColor = "white"; else style.backgroundColor="red";
+   }
+}
+
+function in_x(num)
+ {ar = new Array();
+ for(i=0;i<document.all.length;i++)
+   {
+     if(document.all(i).id == num)
+	    {
+	     for(j=0,n=0;j<=23;j++,n++)
+	      {if(j%6 == 0) j++;
+	        if(document.all(i+j-1).style.background == "red")
+	          ar[n]=1;else ar[n]=-1;
+	        }
+	      return(ar);
+	    	    }
+	 }
+ }
+
+
+function inside()
+ {
+  x1=in_x('st1');
+  x2=in_x('st2');
+  x3=in_x('st3');
+   
+   for(i=0;i<x.length;i++)
+     for(j=0;j<x.length;j++)
+     {
+       if(i==j) w_kof[i*20+j]=0; else
+         w_kof[i*20+j] = x1[i]*x1[j]+x2[i]*x2[j]+x3[i]*x3[j];
+
+          }
+          s="|";
+      for(i=0;i<x.length;i++)
+       for(j=0;j<x.length;j++)
+           {if(w_kof[i*20+j]>=0)
+             s+=w_kof[i*20+j]+"  |";else s+=w_kof[i*20+j]+" |";
+           }
+      text.value=s;
+      }
+
+function hem()
+   {
+          
+     n_x=in_x('st4');
+       jk=0;
+draw2('st5',x);
+   
+   do
+        {
+         jk++;
+        /*alert(w_kof);*/
+        for(i=0;i<20;i++)
+          for(j=0;j<20;j++)
+             {p_x[i]=p_x[i]+w_kof[i*20+j]*n_x[j];}
+         for(j=0;j<20;j++)
+           if(p_x[j]>=0)p_x[j]=1;else p_x[j]=-1;
+
+       sm=1;
+       for(j=0;j<20;j++)
+         if(n_x[j]!=p_x[j]) sm=0;
+         /*alert(n_x);
+         alert(p_x);*/
+         if(sm==1)
+           {draw2('st5',p_x);return;}
+        
+        
+        for(j=0;j<20;j++)
+         n_x[j]=p_x[j];
+
+
+         }
+       while(jk<1000);
+   
+   }
+function win()
+{window.open(" help.htm","Help",[]);}
+</script>
+<STYLE type=text/css>
+
+INPUT
+{
+   border: solid 3 black;
+   font-family: Verdana;
+   font-size: 9pt;
+   color:black;
+   background-color:#D2691E;;
+}
+</STYLE>
+<body background="2.bmp" onHelp="win()">
+<table border=4 align=center bgcolor="#FFE247">
+<table border=0 align=center bgcolor="#00BFFF">
+
+   <caption align=top><font size="5" face="Arial Black" style="background-color:white;">Hopfield network</font></caption>
+
+<tr>
+<td>
+  <table width="100" height="100" border="2" onClick="on()" id="t1" bgcolor="white" align=center>
+   <caption align=top bgcolor="white">Image 1</caption>
+   <tr>
+    <td id="st1">*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+   </table>
+
+<td align=center>
+<table width="100" height="100" border="2" onClick="on()" id="t2" bgcolor="white">
+   <tr>
+    <caption align=top bgcolor="white">Image 2</caption>
+
+   <td id="st2">*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+   </table>
+
+<td>
+<table width="100" height="100" border="2" onClick="on()" id="t3" bgcolor="white" align=center>
+   <tr>
+      <caption align=top>Image 3</caption>
+
+     <td id="st3">*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+   </table>
+
+<tr>
+<td align=center><input align=center type=button value="Delete" onClick="draw2('st1',x)">
+<td align=center><input align=center type=button value="Delete" onClick="draw2('st2',x)">
+<td align=center><input align=center type=button value="Delete" onClick="draw2('st3',x)">
+<tr>
+ <td>
+ 
+ <table width="100" height="100" border="2" id="t4" onClick=on() bgcolor="white" align=center>
+   <tr>
+      <caption align=top>Recognization  </caption>
+
+     <td id="st4">*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+
+   </table>
+ 
+<td align=center>
+  <table> 
+   <caption align=top>Action</caption>
+
+  <tr>
+   <td> 
+   <select  id="sel" size=1 style="border: solid 3 blue;font-family: Verdana;font-size: 9pt;color:black;background-color:#D2691E;">
+     <option value="1">Remember</option>
+     <option value="2">Recognize</option>     
+    </select>
+  <td> 
+   <input align=center  style="border: solid 3 blue;font-family: Verdana;font-size: 9pt;color:black;background-color:#D2691E;" type=button value="Clic" onClick="swic()">
+  
+  </table>
+
+<td>
+	<table width="100" height="100" border="2" id="t5" bgcolor="white" align=center>
+   <tr>
+      <caption align=top>Recognized</caption>
+
+    <td id="st5">*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+    <tr> 
+    <td>*<td>*<td>*<td>*<td>*
+    <tr>
+    <td>*<td>*<td>*<td>*<td>*
+   </table> 
+
+<tr>
+<td align=center><input align=center type=button value="Delete" onClick="draw2('st4',x)">
+<td align=center>
+<td align=center><input align=center type=button value="Delete" onClick="draw2('st5',x)">
+<tr>
+<td colspan=3>
+ <table>
+  <caption align=top>Size Wij</caption>
+  <tr>
+    <td><textarea cols=83 rows=20 id="text" value="dgsfdgsdgsdg"></textarea>  
+
+    
+    </table>
+
+</table>
+<script>
+draw2('st1',x);
+draw2('st2',x);
+draw2('st3',x);
+draw2('st4',x);
+draw2('st5',x);
+function swic()
+{
+if(sel.value=="1")
+  inside();
+if(sel.value=="2")
+  hem();
+if(sel.value=="3")
+ {
+  draw2('st1',x_1);
+  draw2('st2',x_2);
+  draw2('st3',x_3);
+ inside();
+ }
+}
+
+</script>
+   
+
+</body>
+
