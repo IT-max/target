@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>Ресторан</title>
+<style>
+* {margin:0px; padding:0px;}
+.wrap {width:500px; margin:50px auto;}
+.clear {clear:both;}
+
+ul.tabs {list-style:none; width:500px;}
+ul.tabs li:first-child {border-left:1px solid #ccc;}
+ul.tabs li {float:left; border-right:1px solid #ccc; border-top:1px solid #ccc; background-color:#eee;}
+ul.tabs li.active {border-bottom:1px solid #fff; background-color:#fff; margin-bottom:-1px;}
+ul.tabs li a {display:block; padding:5px 10px; color:#777; letter-spacing:-1px; outline:none; text-decoration:none; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+ul.tabs li.active a {font-weight:600; color:#000;}
+
+div.tabs_content {width:500px; border:1px solid #ccc;}
+div.tabs_content > div {padding:20px;}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="jTabs.js"></script> 
+<script>
+$(document).ready(function(){
+    $("ul.tabs").jTabs({content: ".tabs_content", animate: true, effect:"slide"});                       
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+    <ul class="tabs">  
+        <li class="active"><a href="#">Вкладка 1</a></li>
+        <li><a href="#">Вкладка 2</a></li>
+        <li><a href="#">Вкладка 3</a></li>
+    </ul>  
+    <div class="clear"></div>
+    <div class="tabs_content">
+        <div class="inner"></div>
+        <div class="monner"></div>
+        <div class="hummer"></div>
+    </div><!-- tabs content -->
+</div><!-- wrap -->
+
+<!-- pcvector.net -->
+<script type="text/javascript">
+        $( ".inner" ).append( "<p><img src='http://www.logowiks.com/wp-content/uploads/2017/01/best-restaurant-logo-design-7.gif' width='300px'></p><h1>Гурман</h1><p>В 1893 году Максим Гайяр открыл на этом месте маленькое бистро. Гайяр — бывший официант одного из парижских кафе. Он пригласил для выступлений известную в то время комедиантку Ирму де Монтиньи, благодаря чему в заведении стала собираться элегантная и светская публика. Вскоре Maxim’s стал местом встречи самого роскошного парижского общества тех лет.</p><p>Вскоре Максим Гайяр продаёт ресторан и новый владелец осуществляет внутреннее переоформление интерьера в стиле ар нуво. Бар был освещен лампами в виде статуэток полуобнаженных девушек, в декоре использовались детали из красного дерева, бронзы, множество зеркал. Открытие такого шикарного ресторана приурочили к открытию Всемирной парижской выставки 1900 года. Новый ресторан и особенно его кухня получили признание у знаменитостей.</p>" );  
+         $( ".monner" ).append( "<p><img src='http://www.logowiks.com/wp-content/uploads/2017/01/best-restaurant-logo-design-7.gif' width='300px'></p><h1>Гурман</h1><p>Во время немецкой оккупации ресторан является привилегированным местом для немецкой номенклатуры. После освобождения Франции от немецкой оккупации ресторан облюбовала киноэлита того времени.</p><p>В 1981 году сын Луи, Франсуа Водабль, продает заведение Пьеру Кардену. Пьер Карден переделывает три верхних этажа ресторана в музей ар нуво и начинает развивать международную сеть Maxim’s. Филиалы ресторана он открывает в Монте-Карло, Пекине, Женеве, Токио, Шанхае, Нью-Йорке и Брюсселе.</p>" );     
+          $( ".hummer" ).append( "<p><img src='http://www.logowiks.com/wp-content/uploads/2017/01/best-restaurant-logo-design-7.gif' width='300px'></p><h1>Гурман</h1><p>Во время празднования Рождества 1992 года, ровно в полночь арабский эмир, находящийся в зале со своей семьей, высыпал из мешочка драгоценности и одарил всех присутствующих в зале. </p><p>Специально для этого ресторана было создано шампанское «Maxim’s». Оно с гармоничным ассамбляжем из пино нуар, пино менье и шардоне производится на склонах Шинье-Ле-Роз и обладает необычайно тонким фруктовым букетом и весьма изысканным вкусом.</p>" );            
+</script>
+<!-- /pcvector.net -->
+</body>
+</html>
