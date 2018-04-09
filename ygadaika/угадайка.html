@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="jquery-1.5.min.js"></script>
+	<title>Угадайка</title>
+	<style type="text/css">
+		    * {
+                font-family: Arial, "Free Sans";
+            }
+
+            #card {
+                margin: 0 auto;
+                width: 625px;
+                z-index: 1;
+            }
+             #card div {
+                float: left;
+                width: 100px;
+                height: 100px;
+                background: #d9d9d9;
+                margin: 5px;
+                padding: 5px;
+                border: 1px solid #999;
+                cursor: pointer;
+                -webkit-border-radius: .5em;
+                -moz-border-radius: .5em;
+                border-radius: .5em;
+                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+                -moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+                box-shadow: 0 1px 2px rgba(0,0,0,.5);
+                z-index: 2;
+            }
+                #card div img {
+                border: none;
+                z-index: 3;
+            }
+            .opacity {
+                opacity: .6;
+                filter: alpha(opacity=60);
+            }
+
+            #boxbutton {
+                text-align: center;
+                padding: 20px;
+            }
+            .link {
+                font-size: 18px;
+                color: #ffffff;
+                text-decoration: none;
+                background: #0066cc;
+                padding: 5px 10px;
+                -webkit-border-radius: .5em;
+                -moz-border-radius: .5em;
+                border-radius: .5em;
+            }
+            .link:hover {
+                background: #999;
+            }
+	</style>
+</head>
+<body>
+ <div id="boxbutton">
+            <span class="link">
+                <span id="count">0</span>
+                Click
+            </span>
+            &nbsp;
+            <a href="javascript:" class="link" onclick="reset();">Reset</a>
+        </div>
+        <div id="card">
+      <div id="card1"><img src="img/01.png"" /></div> 
+	<div id="card2"><img src="img/02.png"" /></div> 
+	<div id="card3"><img src="img/03.png"" /></div> 
+	<div id="card4"><img src="img/04.png"" /></div> 
+	<div id="card5"><img src="img/05.png"" /></div> 
+	<div id="card6"><img src="img/06.png"" /></div> 
+	<div id="card7"><img src="img/07.png"" /></div> 
+	<div id="card8"><img src="img/08.png"" /></div> 
+	<div id="card9"><img src="img/09.png"" /></div> 
+	<div id="card10"><img src="img/10.png"" /></div> 
+	<div id="card11"><img src="img/01.png"" /></div> 
+	<div id="card12"><img src="img/02.png"" /></div> 
+	<div id="card13"><img src="img/03.png"" /></div> 
+	<div id="card14"><img src="img/04.png"" /></div> 
+	<div id="card15"><img src="img/05.png"" /></div> 
+	<div id="card16"><img src="img/06.png"" /></div> 
+	<div id="card17"><img src="img/07.png"" /></div> 
+	<div id="card18"><img src="img/08.png"" /></div> 
+	<div id="card19"><img src="img/09.png"" /></div> 
+	<div id="card20"><img src="img/10.png"" /></div> 
+
+
+        </div>
+<script type="text/javascript">
+	var boxclick="";
+	var imgshow="";
+	var count=0;
+	var find=0;
+
+	function random(from, to){
+		return Math.floor(Math.random()*(to - from+1)+from);
+	}
+	function shuffle(){
+		var children=$("#card").children();
+		var child=$("#card div:first-child");
+
+		var arimg=new Array();
+		for (i=0; i<children.length; i++){
+			arimg[i]=$("#"+child.attr("id")+" img").attr("src");
+			child=child.next();
+		}
+		var child=$("#card div:first-child");
+		for (j=0; j<children.length; j++){
+			randomIndex=random(0, arimg.length - 1);
+			$("#"+child.attr("id")+" img").attr("src", arimg[randomIndex]);
+			arimg.splice(randomIndex, 1);
+			child=child.next();
+		}
+	}
+	function reset(){
+		shuffle();
+		$("img").hide();
+		$("img").removeClass("opacity");
+		count=0;
+		$("#msg").remove();
+		$("#count").html(""+count);
+		boxclick="";
+		imgshow="";
+		find=0;
+		return false;
+	}
+	$(document).ready(function(){
+		$("img").hide();
+		$("#card div").click(opencard);
+		shuffle();
+
+		function opencard(){
+			id=$(this).attr("id");
+			if ($("#"+id+" img").is(":hidden")){
+				$("card div").unbind("click", opencard);
+				$("#"+id+" img").slideDown('fast');
+				if (imgshow==""){
+					boxclick=id;
+					imgshow=$("#"+id+" img").attr("src");
+					setTimeout(function(){
+						$("#card div").bind("click", opencard)}, 300);
+				}
+				else{
+					currentopen=$("#"+id+" img").attr("src");
+					if (imgshow != currentopen){
+						setTimeout(function(){
+							$("#"+id+" img").slideUp("fast");
+							$("#"+boxclick+" img").slideUp("fast");
+							boxclick="";
+							imgshow="";}, 400);
+					}
+					else{
+						$("#"+id+" img").addClass("opacity");
+						$("#"+boxclick+" img").addClass("opacity");
+						find++
+						boxclick="";
+						imgshow="";
+					}
+					setTimeout(function(){
+						$("card div").bind("click", opencard)}, 400);
+				}
+				count++;
+				$("#count").html(""+count);
+				if (find==10){
+					msg='<span id="msg">Поздравляю! Вы нашли все пары!</span>';
+					$("span.link").prepend(msg);
+				}
+			}
+		}
+	});
+	</script>
+</body>
+</html>
