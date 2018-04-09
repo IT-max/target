@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#boat1 .s{background: grey;}
+		#boat2 .s, .w{  background-image: url(vzruv2.png);}
+		.die {  background-image: url(vzruv1.png);}
+		.slip { background-image: url(spiral.png);}
+		#boat1 div, #boat2 div {width: 20px; height: 20px; float: left;}
+		#boat1, #boat2 {width: 200px; height: 200px; float: left; margin: 10px;}
+
+    .l1{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:7px;
+	left:-1px;
+}
+.l2{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:27px;
+	left:-1px;
+}
+.l3{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:47px;
+	left:-1px;
+}
+.l4{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:67px;
+	left:-1px;
+}
+.l5{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:87px;
+	left:-1px;
+}
+.l6{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:107px;
+	left:-1px;
+}
+.l7{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:127px;
+	left:-1px;
+}
+.l8{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:147px;
+	left:-1px;
+}
+.l9{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:167px;
+	left:-1px;
+}
+.l10{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:187px;
+	left:-1px;
+}
+.lа{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:17px;
+}
+.lб{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:37px;
+}
+.lв{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:57px;
+}
+.lг{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:77px;
+}
+.lд{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:97px;
+}
+.lе{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:117px;
+}
+.lж{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:137px;
+}
+.lз{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:157px;
+}
+.lи{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:177px;
+}
+.lк{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:197px;
+}
+    .f1{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:7px;
+	left:217px;
+}
+.f2{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:27px;
+	left:217px;
+}
+.f3{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:47px;
+	left:217px;
+}
+.f4{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:67px;
+	left:217px;
+}
+.f5{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:87px;
+	left:217px;
+}
+.f6{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:107px;
+	left:217px;
+}
+.f7{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:127px;
+	left:217px;
+}
+.f8{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:147px;
+	left:217px;
+}
+.f9{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:167px;
+	left:217px;
+}
+.f10{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:187px;
+	left:217px;
+}
+.fа{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:234px;
+}
+.fб{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:254px;
+}
+.fв{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:274px;
+}
+.fг{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:294px;
+}
+.fд{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:314px;
+}
+.fе{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:334px;
+}
+.fж{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:354px;
+}
+.fз{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:374px;
+}
+.fи{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:394px;
+}
+.fк{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-family: nyt-franklin,arial,helvetica,sans-serif;
+	top:-11px;
+	left:417px;
+}
+
+	</style>
+</head>
+<body>
+<div id="boat1"></div>
+<div id="boat2"></div>
+<p class="l1">1</p>
+<p class="l2">2</p>
+<p class="l3">3</p>
+<p class="l4">4</p>
+<p class="l5">5</p>
+<p class="l6">6</p>
+<p class="l7">7</p>
+<p class="l8">8</p>
+<p class="l9">9</p>
+<p class="l10">10</p>
+<p class="lа">а</p>
+<p class="lб">б</p>
+<p class="lв">в</p>
+<p class="lг">г</p>
+<p class="lд">д</p>
+<p class="lе">е</p>
+<p class="lж">ж</p>
+<p class="lз">з</p>
+<p class="lи">и</p>
+<p class="lк">к</p>
+<p class="f1">1</p>
+<p class="f2">2</p>
+<p class="f3">3</p>
+<p class="f4">4</p>
+<p class="f5">5</p>
+<p class="f6">6</p>
+<p class="f7">7</p>
+<p class="f8">8</p>
+<p class="f9">9</p>
+<p class="f10">10</p>
+<p class="fа">а</p>
+<p class="fб">б</p>
+<p class="fв">в</p>
+<p class="fг">г</p>
+<p class="fд">д</p>
+<p class="fе">е</p>
+<p class="fж">ж</p>
+<p class="fз">з</p>
+<p class="fи">и</p>
+<p class="fк">к</p>
+
+<script type="text/javascript">
+	(function(w, h){
+		var bplace1 = ['~ss~~~~s~~','~~~~~~~~~~','~~~~s~~~~s','~s~~~~s~~s','~s~~~~s~~s','~s~~~~~~~~','~~~~~~~~s~','~~~~ss~~~~','~s~~~~~~~~','~~~~ssss~~'];
+		var bplace2 = ['~~~s~~~~ss','~s~s~~~~~~','~~~s~~~~~~','~~~s~~~s~~','~~~~~~~s~~','~s~~s~~s~~','~s~~~~~~~~','~s~s~~~~~~','~~~~~ss~~~','ss~~~~~~s~'];
+		var boat1=document.querySelector('#boat1'), boat2=document.querySelector('#boat2');
+		for (i=0; i<w; i++) for (j=0; j<h; j++){
+			div1=document.createElement('div');
+			div1.id=i+'_'+j, div1.className=bplace1[i][j]=='s'?'s':'w';
+			boat1.appendChild(div1);
+			div2=document.createElement('div');
+			div2.className=bplace2[i][j]=='s'?'s':'w';
+			div2.onclick=function(){
+				if (fire(this))
+					backfire();
+			};
+			boat2.appendChild(div2);
+		}
+		function fire(el){
+			if (el.className=='die'||el.className=='slip')
+				return false;
+			el.className=el.className=='s'?'die':'slip';
+			if (document.querySelectorAll('#boat2 .s').length===0){
+				alert('Вы выиграли!')
+				return false;
+			}
+			if (el.className=='slip') 
+				return true;
+		}
+		function backfire(){
+			for (i=w*h; i>0; i--){
+				var target=document.querySelectorAll('#boat1 .s, #boat1 .w');
+				if (target.length===0||fire(target[Math.floor(Math.random()*target.length)]))
+					break;
+			}
+			if (document.querySelectorAll('#boat1 .s').length===0)
+				alert('Вы проиграли (');
+		}
+	})(10, 10);
+</script>
+</body>
+</html>
