@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<style type="text/css">
+		* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+}
+
+#content {
+    display: block;
+    border: 10px solid #555;
+    border-top: 11px solid #555;
+    border-left: 11px solid #555;
+    margin: 0px auto;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#content .cell {
+    float: left;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    background: #BBB;
+    color: #FFF;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-bottom: 1px solid #555;
+    border-right: 1px solid #555;
+}
+
+#content .cell:hover {
+    background: #CCC;
+}
+
+#content .clicked {
+    background: #FFF;
+    color: #070;
+}
+
+#content .clicked:hover {
+    background: #FFF;
+}
+
+#content .flag:after {
+    content: '!';
+}
+
+#content .flag {
+    background: #C70;
+}
+
+#content .flag:hover {
+
+}
+
+#content .clear {
+    clear: both;
+}
+
+#content .dead {
+    background: #E00;
+}
+
+#content .dead:hover {
+    background: #F00;
+}
+
+#content .bomb:after {
+    content: url(бомба.png);
+    color: #700;
+}
+	</style>
+</head>
+<body>
+<a target = _self href = "Легкий.html"><input type = "button" name = "start" value = "Легкий"></a>
+<a target = _self href = "Средний.html"><input type = "button" name = "start" value = "Средний"></a>
+</body><a target = _self href = "Тяжелый.html"><input type = "button" name = "start" value = "Тяжелый"></a>
+<div id="content"></div>
+<script type="text/javascript">
+var WIDTH= 30; // Minefield width
+var HEIGHT = 30 // Minefield height
+var BOMBS = 10; // Chance of getting a bomb: 1/BOMBS
+var alive = true;
+function newElement(name, args, events) {
+    var el = document.createElement(name);
+    queryElement(el, args);
+    el.onclick = function(){ alive && events.left && (el.getAttribute('clickable') == 1) && events.left(el); };
+    el.oncontextmenu = function(){ alive && events.right && (el.getAttribute('clickable') == 1) && events.right(el); return false; };
+    return el;
+}
+function queryElement(el, args) {
+    for(key in args) el.setAttribute(key, args[key]);
+    return el;
+}
+var ct = document.getElementById('content');
+var iddqd = 0; var bombCount = 0; var unpressedCells = WIDTH*HEIGHT;
+ct.style.width = (WIDTH*20)+'px'; ct.style.height = (HEIGHT*20)+'px';
+for(i = 0; i < WIDTH*HEIGHT; i++)
+{
+    if(hasBomb = Math.floor(Math.random()*BOMBS)==0 ? 1 : 0) bombCount++;
+    ct.appendChild(newElement('div', {num: i, clickable: 1, class:'cell', bomb: hasBomb}, {left:function(el, a){
+        if(el.getAttribute('bomb') == 1) {
+            if(iddqd) return false;
+            alive = false;
+            for(i = 0; i < WIDTH*HEIGHT; i++) if(ct.children[i].getAttribute('bomb') == 1) ct.children[i].setAttribute('class', 'cell bomb');
+            el.setAttribute('class', el.getAttribute('class').replace(/flag/, '') + ' dead');
+            alert('BOOM!'); return false;
+        }
+        var index = parseInt(el.getAttribute('num'));
+        var neighbours = [index-1, index+1, index-WIDTH-1, index-WIDTH, index-WIDTH+1, index+WIDTH-1, index+WIDTH, index+WIDTH+1];
+        var count = 0;
+        for(i in neighbours) count += el.parentNode.children[neighbours[i]] && parseInt(el.parentNode.children[neighbours[i]].getAttribute('bomb'));
+        queryElement(el, {'class':'cell clicked', 'clickable':0}).innerHTML = count;
+        if(!count) {  // expand recursively
+            el.innerHTML = ''; iddqd++;
+            for(i in neighbours) el.parentNode.children[neighbours[i]] && el.parentNode.children[neighbours[i]].getAttribute('class')!='clear' && el.parentNode.children[neighbours[i]].onclick(1);
+            iddqd--;
+        }
+        else el.setAttribute('class', el.getAttribute('class').replace(/flag/, ''));
+        if(--unpressedCells == bombCount) {
+            alive = false; alert('U ARE WINRAR!');
+        }
+    }, right:function(el){
+        el.getAttribute('class').indexOf('flag') != -1 ? el.setAttribute('class', el.getAttribute('class').replace(/flag/, '')) : queryElement(el, {'class':el.getAttribute('class')+' flag'});
+    }}));
+}
+ct.appendChild(newElement('div', {class:'clear'}));
+</script>
+</body>
+</html>
