@@ -1,0 +1,99 @@
+﻿<style type="text/css">
+.c > div {
+        padding: 1em;
+        }
+
+.c1 {
+  background-color:white;
+}
+
+.c2 {
+  background-color:white;
+}
+
+.c3 {
+  background-color:white;
+}
+        @media screen and (min-width: 56em) {
+            .c1 {
+                float: left;
+                width: 45%;
+            }
+            .c2 {
+                width: 800px;
+                margin-left: 290px;
+            }
+            .c3 {
+                float: left;
+                width: 100%;
+            }
+
+        }
+	a.knopka {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: orange; /* фон кнопки */
+  padding: .9em 6em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+} 
+
+hr {
+    background-color: black; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+   }
+   #hk {
+    border-bottom-style:dotted;
+    border-bottom-color: white; /* Цвет линии */
+
+    height: 1px; /* Толщина линии */
+   }
+ #hc  {
+	border-bottom-style:dotted;
+}
+	time.icon
+{
+  font-size: 1em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 6em;
+  background-color: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+}
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  padding: 0.4em 0;
+  color: #fff;
+  background-color: black;
+  border-bottom: 1px dashed black;
+  box-shadow: 0 2px 0 black;
+}
+time.icon em
+{
+  position: absolute;
+  bottom: 0.3em;
+  color: #fd9f1b;
+}
+time.icon span
+{
+  font-size: 2.8em;
+  letter-spacing: -0.05em;
+  padding-top: 0.8em;
+  color: grey;
+}
+</style>

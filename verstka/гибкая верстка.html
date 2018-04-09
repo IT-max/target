@@ -1,0 +1,177 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>Основы HTML и CSS</title>
+ <meta charset="UTF-8">
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+        <link rel="stylesheet" href="assets/countdown/jquery.countdown.css" />
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+  a.knopka {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: orange; /* фон кнопки */
+  padding: .9em 6em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+} 
+    a.knopka:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+	a.knopka:active { background: rgb(152,15,0); } /* при нажатии */
+	   figure {
+    width: 100%; /* Ширина */
+    float: left; /* Выстраиваем элементы по горизонтали */
+    margin: 0 0 0 3.5%; /* Отступ слева */
+    background: #f0f0f0; /* Цвет фона */
+    border-radius: 5px; /* Радиус скругления */
+    padding: 2%; /* Поля */
+   }
+    </style></head>
+<body>
+    <div id="pattern" class="pattern">
+    <div class="c">
+     <div class="c2" align="center">
+               
+<p><img src="znak.png" width="23px" height="20px"> <b>GOLD <font color="orange"> COACH</font></b>
+<p><h5>GoldCoach представляет...</h5>
+<hr>
+<p><b><font color="orange">БЕСПЛАТНЫЙ ВЕБИНАР</font></b>
+<p><b>10 ШАГОВ К СОЗДАНИЮ «САМОРАЗВИВАЮЩЕЙСЯ КОМПАНИИ» (ВКЛЮЧАЯ СВОБОДУ, КАК УПРАВЛЯТЬ 3 КОМПАНИЯМИ И ПРОЙТИ IRONMAN)</b>
+<p><a href="#" class="knopka">Забронировать место! >></a>
+           
+            </div>
+            <div class="c1">
+             <table  border="0" cellpadding="20" align="right" width="300px">
+                	<tr>
+	<td  bgcolor="orange">
+		<time datetime="2014-09-20" class="icon">
+  <!-- <em>Saturday</em> -->
+  <strong>Октябрь</strong>
+  <span>8</span>
+</time>
+	</td>
+		<td  bgcolor="orange" width="100px" height="100px" text align="left">
+		<font color="white">
+		<script type="text/javascript">
+var day=new Date();
+var weekday=new Array(7);
+weekday[0]="ВОСКРЕСЕНЬЕ";
+weekday[1]="ПОНЕДЕЛЬНИК";
+weekday[2]="ВТОРНИК";
+weekday[3]="СРЕДА";
+weekday[4]="ЧЕТВЕРГ";
+weekday[5]="ПЯТНИЦА";
+weekday[6]="СУББОТА";
+document.write(weekday[day.getDay()]);
+var d=new Date();
+var month=new Array(12);
+var day = new Date();
+document.write("<br>" + day.getUTCDate());
+month[0]="ЯНВАРЯ";
+month[1]="ФЕВРАЛЯ";
+month[2]="МАРТА";
+month[3]="АПРЕЛЯ";
+month[4]="МАЯ";
+month[5]="ИЮНЯ";
+month[6]="ИЮЛЯ";
+month[7]="АВГУСТА";
+month[8]="СЕНТЯБРЯ";
+month[9]="ОКТЯБРЯ";
+month[10]="НОЯБРЯ";
+month[11]="ДЕКАБРЯ";
+document.write('\n' + month[d.getMonth()]);
+var lt = new Date();
+document.write ("<div id=hk><br>" + lt.toLocaleTimeString() + " MCK");
+</script>
+</font> 
+
+</td>
+		</td>
+		</tr>
+		<tr>
+		<td   colspan="2" bgcolor="orange" width="400px" text align="left">
+		<div text align="center">
+           <p><img src="man.png" width="100px" height="100px"> 
+			<font color="white"><p><i>Спикер</i>
+			<p><h3>ИВАН
+			<br>ЗИМБИЦКИЙ</h3> </div>
+			<h6><p><li>Отец, блогер, путешественник, спортсмен</li>
+			<p><li>Владелец 3 бизнесов (детский футбол, разница, онлайн)</li>
+			<p><li>Автор 6 книг и более 200 публикаций</li>
+			<p><li>Создал более 20 курсов и тренингов, которые прошли более 20 000 человек.</li>
+			<p><li>Помог более 1000 предпринимателей начать успешный бизнес</li>
+			<p><li>Владелец сети футбольных клубов для дошкольников</li>
+			<p><li>Успешно управляет более 130 людьми (и живет счастливо)</li>
+			<p><li>Создал мировую революцию в детском футболе, создав прибыльную модель футбольной школы для дошкольников от 3 до 7 лет</li>
+			<p><li>Выступал на одной сцене с Джорданом Белфордом (Волк с Уолл-Стрит)</li></h6></font>
+		</td>
+		</td>
+	</tr>
+		</table>
+            </div>
+             <div class="container"> 
+        <section class="pattern-description">
+         <table  border="0" cellpadding="20" align="left" width="400px">
+         <tr>
+           		<td rowspan="2" bgcolor="silver" width="300px">
+		
+        <!-- JavaScript includes -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="assets/countdown/jquery.countdown.js"></script>
+		<script src="assets/js/script.js"></script><div align="center"><b>ДО СТАРТА ТРАНСЛЯЦИИ ОСТАЛОСЬ...</b></div>
+			<div id="countdown"></div>
+
+		<p id="note"></p>
+
+        <footer>
+	   
+            <a class="tzine" href="http://tutorialzine.com/2011/12/countdown-jquery/"></a>
+        </footer>
+        
+		<font color="silver">______</font>дней<font color="silver">_________</font>часов<font color="silver">________</font>минут<font color="silver">_______</font>секунд
+		<div align="left"><p><b>ВОТ ВСЕГО ЛИШЬ МАЛАЯ ЧАСТЬ ИЗ ТОГО, ЧТО ТЫ УЗНАЕШЬ НА ВЕБИНАРЕ</b></div>
+			<p><img src="ptax.png" width="20px" height="15px">  Простая <b>10 шаговая система</b> для дизайна «Саморазвивающейся Компании» в 2017 году
+			<p><img src="ptax.png" width="20px" height="15px">  Как решить проблему людей №1 и масштабировать бизнес в 10 раз
+			<p><img src="ptax.png" width="20px" height="15px">  Какие <b>4 пункта</b> плана внедрить за следующие 6 месяцев, чтобы освободить 80% вашего времени
+			<p><img src="ptax.png" width="20px" height="15px">  <b>2 простых</b> и легких для внедрения «фишки», которые радикально поднимут эффктивность компании
+			<p><img src="ptax.png" width="20px" height="15px">  3 фундаментальные причины, почему Ваш бизнес никогда не масштабируется на свой 100% потенциал прибыли
+			<p><img src="ptax.png" width="20px" height="15px">  <b>Вы или Вас:</b> как перестать быть жертвой подчиненных и начать профессионально управлять людьми<
+			<p><img src="ptax.png" width="20px" height="15px"> <b> 3 тактики,</b> которые превратят кризисную компанию в устойчивую и прибыльную в 2017 году</li>
+			<p><img src="ptax.png" width="20px" height="15px"> <b> Формула</b> как построить здоровую и умную компанию на долгие годы, чтобы и внуки вами гордились
+			<br><br><br><br><br>	
+		</td>
+		</td>
+	</tr>
+	</table>
+        </section>
+    </div>
+            <div class="c3">
+            </table>
+<table border="0" cellpadding="30" align="center">
+	<tr>
+		<td width="733px">
+		Наконец-то, раскрыта технология как предпринимателю управлять прибыльным бизнесом (и даже не одним), при этом оставаясь свободным, здоровым и довольным жизнью, без стресса и необходимости жить на работе!
+		<p>Представьте, как Вы <b>с удовольствием просыпаетесь утром</b> и с самых первых минут дня точно знаете, что нужно делать сегодня, чиобы сделать ваш бизнес еще более прибыльным...
+		<p>За утренним кофе Вы смотрите статистику по продажам и <b>с чувством гордости видите</b>, что по сравнению с прошлым месяцем она выросла значительно, так как Вы внедрили новые системы в продажах и маркетинге...
+		<p>Вы с <b>нетерпением ждете встречи с Вашей командой</b>, чтобы обсудить новые способы давать большие ценности вашим клиентам и мотивировать их возвращаться к вам чаще и чаще.
+		<p>При этом вы знаете, что уже <b>в 4 часа дня будете сврбодны</b>, чтобы заняться спортом, а потом провести вечер с семьей... А в следующем месяце у Вас запланирован отпуск в теплой стране, о которой вы так давно мечтали...
+		<p><b>Не так давно вы бы провели этот день (и многие следующие) в стрессе, «тушении пожаров»</b>, работая слишком долго и слишком упорно, почти без поддержки, реагируя на проблемы, вместо того, чтобы создавать успех.
+		<p>Вы улыбаетесь, понимая, как далеко вы продвинулись и как много побед впереди...
+		<p>Приветствую, меня зовут Иван Зимбицкий и в начале карьеры предпринимателя я тоже работал по 12-18 часов в день, как и вы, возможно, сейчас... Однако я общался с многими западными предпринимателями и видел, что они успешнее меня и при этом свободны и наслаждаются жизнью, а их бизнес растет...
+		<p>Чтобы раскрыть их секрет я инвестировал в обучение у наставников из США более $15 000. И мне удалось «взломать» код технологии как создать «саморазвивающийся» бизнес, который дает деньги и свободу.
+		<p>Сейчас у меня 3 бизнеса.
+		<p>При этом я путешествую по 4 месяца в году, обучаюсь, провожу время с семьей, обучаю команду, провожу мероприятия на 100-150 человек, занимаюсь спортом каждый день и интенсивно готовлюсь к прохождению дистанции Ironman 70.3 (это 1,9 км плавания, 90 км на велосипеде и 21,1 км - бег).
+		<div align="center"><img src="people.png" width="100%" alt="Рыжая кошка"></div>
+		<p><font size="5"> И я знаю, что это возможно и для вас...</font>
+		<p><h5>Приходите на мой вебинар и я раскрою вам свою технлогию в деталях.</h5>
+		<p><div align="center"><a href="#" class="knopka"><font size="6">Да! Забронировать место сейчас! >></font></a></div>
+		</td>
+	</tr>
+</table>
+            </div>
+        </div>
+    </div>
+    <!--End Pattern HTML-->
+    
+</body>
+</html>
